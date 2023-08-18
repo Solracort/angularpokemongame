@@ -1,0 +1,6 @@
+.row{
+    width:100%;
+    background-color: coral;
+    display:block;
+    /* flex-direction: row; */
+}

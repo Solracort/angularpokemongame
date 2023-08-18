@@ -1,0 +1,14 @@
+
+row{
+    margin-bottom: 0;
+}
+img{
+    width: 100%;
+    height: 98vh;
+}
+sidebar {
+    position:fixed;
+    top:5%;
+    width:10%;
+    margin-left: 0.75%;
+}

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="column1">
+            <h2 class="teams">MY SQUAD:</h2>
+            <div class="squad" *ngFor="let item of mySquad">
+                <p><strong>{{item.name | uppercase}}</strong></p>
+                <img  
+                class="pokemon-image"
+                [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + item.id + '.png'"
+                alt="Photo of pokemon"                        
+                />
+            </div>
+        </div>
+        <div class="column2" >
+            <h2 class="teams">ENEMIES</h2>
+            <div class="enemies" *ngFor="let item of myEnemySquad">
+                <p><strong>{{item.name | uppercase}}</strong></p>
+                <img  
+                class="pokemon-image"
+                [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + item.id + '.png'"
+                alt="Photo of pokemon"                        
+            />
+            </div>
+            
+        </div>
+    </div>
+</div>

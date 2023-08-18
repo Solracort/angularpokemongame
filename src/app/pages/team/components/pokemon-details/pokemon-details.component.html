@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="favorites" >
+        <div class="squad">
+            <mat-icon 
+                class="goHome"
+                [routerLink]="''">reply
+            </mat-icon>
+            <span><strong>Squad: </strong></span>
+        </div>
+        <div class="team" *ngFor="let pokemon of mySquad"> {{pokemon.name | uppercase}}&nbsp;   </div>
+    </div>
+    
+    <div *ngIf="maxSquad==sizeSquad"
+         (click)="sendMySquad()"
+         class="battle"
+         [routerLink]="'/team/battle'">
+            <span class="material-symbols-outlined">swords</span>
+            <span class="fightButtonText"> FIGHT!!!</span>              
+    </div>
+     
+    <div class="col" *ngIf="pokemonDetailed">
+        
+        <div class="fullStats">
+           
+            <div class="picture">
+                <h2>{{pokemonDetailed.name | uppercase}}</h2>
+                <img  
+                class="pokemon-image"
+                [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pokemonDetailed.id + '.png'"
+                alt="Photo of pokemon"                        
+            />
+            </div>
+            <div class="properties">
+                <div class="general">
+                    <p><strong>Type: {{pokemonDetailed.types[0].type.name | uppercase }}</strong></p>
+                    <p><strong>Experience: {{pokemonDetailed.base_experience}}</strong></p>
+                    <p><strong>Height:</strong> {{pokemonDetailed.height}}</p>
+                    <p><strong>Weight:</strong> {{pokemonDetailed.weight}}</p>
+                </div>
+               <div class="abilities">
+                    <p><strong>Skills:</strong> </p>
+                    <ul>
+                        <li *ngFor="let abilityName of getAbilities()">{{ abilityName }}</li>
+                    </ul>
+               </div>
+               <div class="stats">
+                    <p><strong>Stats:</strong> </p>
+                    <ul>
+                        <li *ngFor="let stat of getStats()">{{ stat.name }} :{{ stat.value}}</li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="pokeball">
+                <div class="contentpokeball">
+                    <img class="pokeballImage" 
+                    width="50%" 
+                    src="../../../../../assets/pngwing.com.png" 
+                    alt="pokeballImage"/>
+                </div>
+                <div class="buttonsPokeball">
+                    <button (click)="addPokemon()" mat-fab extended color="primary">
+                        <mat-icon>favorite</mat-icon>
+                        Añadir
+                    </button>
+                    <button (click)="deletePokemon()" mat-fab extended color="primary">
+                        <mat-icon>close</mat-icon>
+                        Eliminar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+    <div class="colMenu" *ngFor="let item of menuItems">
+        <li [routerLink]="[item.route]" routerLinkActive="active">
+               <strong>{{item.name}}</strong>                
+        </li>
+       
+    </div>

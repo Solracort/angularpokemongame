@@ -1,0 +1,12 @@
+.row{
+    width:100%;
+    background-color:darkblue;
+    
+}
+
+li{
+    cursor:pointer;
+    list-style-type: none;
+    margin-right:0.5%;
+    color:antiquewhite;
+}
