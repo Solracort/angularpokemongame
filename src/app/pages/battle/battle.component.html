@@ -1,27 +1,67 @@
 <div class="container">
     <div class="row">
         <div class="column1">
-            <h2 class="teams">MY SQUAD:</h2>
+            <h2 class="teams">YOUR SQUAD:</h2>
             <div class="squad" *ngFor="let item of mySquad">
-                <p><strong>{{item.name | uppercase}}</strong></p>
-                <img  
-                class="pokemon-image"
-                [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + item.id + '.png'"
-                alt="Photo of pokemon"                        
-                />
+               
+                <div class="pokemonContainer">
+                    <div class="imageContainer">
+                        <img  
+                        class="pokemon-image"
+                        [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + item.id + '.png'"
+                        alt="Photo of pokemon"                        
+                        />
+                    </div>
+                    
+                    <div class="statsContainer">
+                        <p><strong>{{item.name | uppercase}}</strong><br>
+                            <strong>exp: {{item.base_experience}}</strong></p>
+                            
+                            <p><small>
+                                HP : {{item.stats[0].base_stat}}<br>
+                                Attack : {{item.stats[0].base_stat}}<br>
+                                Defense : {{item.stats[0].base_stat}}<br>
+                                Special Attack : {{item.stats[0].base_stat}}<br>
+                                Special Defense : {{item.stats[0].base_stat}}<br>
+                            </small></p>
+                    </div>
+                </div>                
             </div>
         </div>
         <div class="column2" >
             <h2 class="teams">ENEMIES</h2>
             <div class="enemies" *ngFor="let item of myEnemySquad">
-                <p><strong>{{item.name | uppercase}}</strong></p>
-                <img  
-                class="pokemon-image"
-                [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + item.id + '.png'"
-                alt="Photo of pokemon"                        
-            />
+                
+                <div class="pokemonContainer">
+                    <div class="imageContainer">
+                        <img  
+                        class="pokemon-image"
+                        [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + item.id + '.png'"
+                        alt="Photo of pokemon"                        
+                        />
+                    </div>
+                    
+                    <div class="statsContainer">
+                        <p><strong>{{item.name | uppercase}}</strong><br>
+                            <strong>exp: {{item.base_experience}}</strong></p>
+                            
+                            <p><small>
+                                HP : {{item.stats[0].base_stat}}<br>
+                                Attack : {{item.stats[0].base_stat}}<br>
+                                Defense : {{item.stats[0].base_stat}}<br>
+                                Special Attack : {{item.stats[0].base_stat}}<br>
+                                Special Defense : {{item.stats[0].base_stat}}<br>
+                            </small></p>
+                    </div>
+                </div>      
             </div>
             
         </div>
+    </div>
+    <div *ngIf="visible" class="actionBox">
+        <!-- <span>{{pokemonActions.myAction}} : {{pokemonActions.power}}</span> -->
+        {{action4show.name}}:
+        {{action4show.myAction}}
+        {{action4show.power}}
     </div>
 </div>

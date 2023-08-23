@@ -29,6 +29,6 @@ export class TeamSelectionService {
       const pokemon = await lastValueFrom(this.pokemonService.getPokemons(id));
       if(pokemon) this.pokemon100List.push(pokemon);        
     }
-    console.log('pokemon100List en team-selectServ:', this.pokemon100List);
+    // console.log('pokemon100List en team-selectServ:', this.pokemon100List);
   }
 }
