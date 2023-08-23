@@ -126,7 +126,7 @@ export class BattleComponent {
           if (j<this.myEnemySquad.length){
             this.recordAction({name:this.myEnemySquad[j].name, myAction:'Te elijo a ti!!!', power:0});
             this.lifeBarEnemy = this.myEnemySquad[j].stats[0].base_stat;
-          }else {this.recordAction({name:'YOUR SQUAD', myAction:'WIN!!!!', power:1000})}  
+          }else {this.recordAction({name:'YOUR SQUAD', myAction:'WIN!!!! Score:', power:1000})}  
         }
         if (this.lifeBarSquad<=0){
           this.recordAction({name:this.mySquad[i].name, myAction:' dies', power:0});
