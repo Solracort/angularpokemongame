@@ -1,4 +1,23 @@
 
+.titleTop{
+    position: fixed;
+    top:0.5%;
+    right:3%;
+    color:rgb(40, 50, 179);
+    z-index : 1000;
+    
+
+}
+.goHome{
+    width: 100%;
+    font-size:3.5em;
+    margin:1%;
+    justify-content: center;
+    color:blue;
+    height:auto;
+    overflow: hidden;
+    cursor:pointer;
+}
 .row{
     display:flex;
     

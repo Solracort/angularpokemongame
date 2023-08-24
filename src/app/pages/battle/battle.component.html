@@ -1,4 +1,10 @@
 <div class="container">
+    <div class="titleTop">
+        <mat-icon 
+            class="goHome"
+            [routerLink]=" '/team/selection'">reply
+        </mat-icon>
+    </div>
     <div class="row">
         <div class="column1">
             <h2 class="teams">YOUR SQUAD:</h2>
@@ -15,14 +21,14 @@
                     
                     <div class="statsContainer">
                         <p><strong>{{item.name | uppercase}}</strong><br>
-                            <strong>exp: {{item.base_experience}}</strong></p>
-                            
+                            <strong>Exp: {{item.base_experience}}</strong><br>
+                            <strong>Type:{{item.types[0].type.name}}</strong></p>
                             <p><small>
-                                HP : {{item.stats[0].base_stat}}<br>
-                                Attack : {{item.stats[0].base_stat}}<br>
-                                Defense : {{item.stats[0].base_stat}}<br>
-                                Special Attack : {{item.stats[0].base_stat}}<br>
-                                Special Defense : {{item.stats[0].base_stat}}<br>
+                                HP     : {{item.stats[0].base_stat}}<br>
+                                Attack : {{item.stats[1].base_stat}}<br>
+                                Defense : {{item.stats[2].base_stat}}<br>
+                                Special Attack : {{item.stats[3].base_stat}}<br>
+                                Special Defense : {{item.stats[4].base_stat}}<br>
                             </small></p>
                     </div>
                 </div>                
@@ -43,14 +49,15 @@
                     
                     <div class="statsContainer">
                         <p><strong>{{item.name | uppercase}}</strong><br>
-                            <strong>exp: {{item.base_experience}}</strong></p>
+                            <strong>Exp: {{item.base_experience}}</strong><br>
+                            <strong>Type: {{item.types[0].type.name}}</strong></p>
                             
                             <p><small>
                                 HP : {{item.stats[0].base_stat}}<br>
-                                Attack : {{item.stats[0].base_stat}}<br>
-                                Defense : {{item.stats[0].base_stat}}<br>
-                                Special Attack : {{item.stats[0].base_stat}}<br>
-                                Special Defense : {{item.stats[0].base_stat}}<br>
+                                Attack : {{item.stats[1].base_stat}}<br>
+                                Defense : {{item.stats[2].base_stat}}<br>
+                                Special Attack : {{item.stats[3].base_stat}}<br>
+                                Special Defense : {{item.stats[4].base_stat}}<br>
                             </small></p>
                     </div>
                 </div>      

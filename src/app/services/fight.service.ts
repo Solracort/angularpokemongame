@@ -40,7 +40,53 @@ export class FightService {
 
       // console.log( pokemon.name, dice, this.beat.myAction, this.beat.power);
       return this.beat;
+  }
+  checkTypes(type1:string, type2:string):number{
+    let typeResult = 1;
+    switch (type1){
+      case 'grass': 
+          if (type2='bug' || 'fire') {typeResult = 1.25};
+        break;
+        case 'fire': 
+          if (type2='water' || 'ground') {typeResult = 1.25};
+        break;
+        case 'water': 
+          if (type2='electric' || 'grass') {typeResult = 1.25};
+        break;
+        case 'bug': 
+          if (type2='fire' || 'rock') {typeResult = 1.25};
+        break;
+        case 'normal': 
+          if (type2='fighting' || 'psychic') {typeResult = 1.25};
+        break;
+        case 'poison': 
+          if (type2='grass' || 'water') {typeResult = 1.25};
+        break;
+        case 'electric': 
+          if (type2='ground' || 'rock') {typeResult = 1.25};
+        break;
+        case 'ground': 
+          if (type2='water' || 'grass') {typeResult = 1.25};
+        break;
+        case 'fairy': 
+          if (type2='ghost' || 'poison') {typeResult = 1.25};
+        break;
+        case 'fighting': 
+          if (type2='fairy' || 'psychic') {typeResult = 1.25};
+        break
+        case 'psychic': 
+          if (type2='bug' || 'ghost') {typeResult = 1.25};
+        break;
+        case 'rock': 
+          if (type2='water' || 'fighting') {typeResult = 1.25};
+        break;
+        case 'ghost': 
+          if (type2='ghost' || 'fairy') {typeResult = 1.25};
+        break;
 
+    }
+    
+    return typeResult;
   }
   constructor(){}
 }

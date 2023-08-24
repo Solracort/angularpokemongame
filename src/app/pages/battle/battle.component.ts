@@ -90,15 +90,18 @@ export class BattleComponent {
     this.lifeBarEnemy = this.myEnemySquad[j].stats[0].base_stat;
 
     for (let i=0;i< this.mySquad.length;i++){
-      // if (j<this.myEnemySquad.length){
         this.lifeBarSquad = this.mySquad[i].stats[0].base_stat;
-      // }
       while (this.lifeBarSquad>0 && j<this.myEnemySquad.length){
         
         if (this.turnSquad){ // depending on the turn, one attacks and the other defeats
-           
+          let enhancer: number = this.fightService.checkTypes(
+            this.mySquad[i].types[0].type.name, this.myEnemySquad[j].types[0].type.name
+            ); 
           this.attack  = { ... this.fightService.attack(this.mySquad[i])};
           this.defense = { ... this.fightService.defense(this.myEnemySquad[j])};
+          
+          this.attack.power = this.attack.power * enhancer;
+          
           this.recordAction(this.attack);
           this.recordAction(this.defense);
                 
@@ -143,14 +146,13 @@ export class BattleComponent {
     this.pokemonActions.push(action);       
   }
   showActions(){
-    let speed = 2000;
+    let speed = 1000;
     this.pokemonActions.forEach((element, index) => {
         setTimeout(()=>{
           this.action4show = {...element};
           this.visible=true;          
         }, index*speed)
         this.visible=false;
-      
     });
   }
   changeTurn(){this.turnSquad = !this.turnSquad}
