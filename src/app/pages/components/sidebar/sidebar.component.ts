@@ -13,10 +13,9 @@ interface MenuItem {
 export class SidebarComponent {
 
   public menuItems: MenuItem[]=[
-    { route: '/team/selection', name: 'Elegir Equipo'},
     { route: '/top100', name: 'Top 100'},
-    { route: '',    name: '...'},
-    
+    { route: '/team/selection', name: 'Elegir Equipo'},
+    { route: '',    name: '...'},   
   ]
 
   

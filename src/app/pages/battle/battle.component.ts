@@ -94,14 +94,15 @@ export class BattleComponent {
       while (this.lifeBarSquad>0 && j<this.myEnemySquad.length){
         
         if (this.turnSquad){ // depending on the turn, one attacks and the other defeats
-          let enhancer: number = this.fightService.checkTypes(
+          let enhancer: number = Math.trunc(this.fightService.checkTypes(
             this.mySquad[i].types[0].type.name, this.myEnemySquad[j].types[0].type.name
-            ); 
+            )); 
+            
           this.attack  = { ... this.fightService.attack(this.mySquad[i])};
           this.defense = { ... this.fightService.defense(this.myEnemySquad[j])};
           
           this.attack.power = this.attack.power * enhancer;
-          
+
           this.recordAction(this.attack);
           this.recordAction(this.defense);
                 
