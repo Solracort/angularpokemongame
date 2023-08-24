@@ -1,5 +1,5 @@
 .goHome{
-    color:blue;
+    color:#1a6985;
     font-size:5vh;
     align-items: center;
     justify-content: center;
@@ -15,7 +15,7 @@
 }
 .favorites{
     font-size:4vh;
-    color:mediumblue;
+    color:#1a6985;
     height:12vh;
     display:flex;
 }

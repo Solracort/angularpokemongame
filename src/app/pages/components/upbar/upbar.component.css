@@ -2,7 +2,7 @@
 .icon{
     position: fixed;
     width:100%;
-    background-color: blanchedalmond;
+    background-color: #1a6985;
     height:5vh;    
     margin-bottom: 0;
     padding: 0;
@@ -21,5 +21,14 @@ mat-icon{
     font-size:2.5rem;
     align-items: center;
     justify-content: center;
+    background-color: #fbcf1b;
 
+}
+.poketitle{
+    height:auto;
+    width :100% ;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    top:32%;
 }

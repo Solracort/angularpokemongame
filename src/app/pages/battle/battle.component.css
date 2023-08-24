@@ -3,7 +3,7 @@
     position: fixed;
     top:0.5%;
     right:3%;
-    color:rgb(40, 50, 179);
+    color:#1a6985;
     z-index : 1000;
     
 
@@ -13,7 +13,7 @@
     font-size:3.5em;
     margin:1%;
     justify-content: center;
-    color:blue;
+    color:#1a6985;
     height:auto;
     overflow: hidden;
     cursor:pointer;
@@ -36,7 +36,7 @@
     height:auto;
 }
 .column1{
-    background-color: rgb(40, 50, 179);    
+    background-color: #1a6985;    
 }
 .column2{
     background-color:crimson;
