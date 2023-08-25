@@ -2,11 +2,11 @@
     <img src="https://www.pokemonwizard.com/assets/Pokemon-Wizard-Top-100-Header.png"/>
     <mat-icon 
         class="goHome"
-        [routerLink]="''">reply</mat-icon>
+        [routerLink]="''">reply
+    </mat-icon>
 </div>
 
 <div class="row">
-    
     <div class="cardsCollection">
         <br/><br/><br/><br/>
         <mat-grid-list class="matgridlist" cols="5" >
@@ -22,21 +22,16 @@
                         alt="Photo of pokemon"                        
                     />
                     <mat-card-content>
-                    <p class="experience">
-                        Experience: {{card.pokemon?.base_experience}}
-                    </p>
-                    <!-- <p>
-                        {{card.description}}
-                    </p> -->
+                        <p class="experience">
+                            Experience: {{card.pokemon?.base_experience}}
+                        </p>
                     </mat-card-content>
                     <mat-card-actions>
                         <button mat-button>LIKE</button>
                         <button mat-button>SHARE</button>
                     </mat-card-actions>
                 </mat-card>
-                
             </mat-grid-tile>
-            
         </mat-grid-list>
         <br><br>
     </div>

@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class MenuService {
-  public hide$ : BehaviorSubject<boolean> = new BehaviorSubject(true);
+export class ScreenSizeService {
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 

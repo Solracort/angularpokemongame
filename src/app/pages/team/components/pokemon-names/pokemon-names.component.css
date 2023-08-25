@@ -3,10 +3,33 @@
     background-color:#1a6985;
     
 }
-
 li{
     cursor:pointer;
     list-style-type: none;
     margin-right:0.5%;
     color:antiquewhite;
+}
+.matgridlist {
+    transition: max-height 0.5s ease-in-out;
+    max-height: 800px; 
+    overflow: hidden;
+}
+.toggle-button {
+    transition: margin 0.5s ease-in-out;
+    margin-top: 2%;
+    color: white; 
+}
+.expand-icon {
+    width:auto;
+    font-size: 36px; 
+}
+@media (max-width: 768px) { /* Establecer el ancho máximo para tabletas y smartphones */
+    .tablet-columns {
+      display: flex;
+      justify-content: center; /* Centrar la lista de columnas */
+    }
+    .mobile-columns {
+      display: flex;
+      justify-content: center; /* Centrar la lista de columnas */
+    }
 }

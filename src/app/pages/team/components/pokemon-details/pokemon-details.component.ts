@@ -13,12 +13,13 @@ export class PokemonDetailsComponent implements OnInit{
 
   private teamSelection = inject(TeamSelectionService);
   private fightService = inject(FightService);
+  
   public pokemonDetailed : (fullPokemonData | null) = null;
   private subscription: Subscription | undefined;
   public mySquad : fullPokemonData[] = [];
   private localStorageKey = 'mySquadData';
-  public sizeSquad: number = 0;
-  public maxSquad : number = 4;
+  public  sizeSquad: number = 0;
+  public  maxSquad : number = 4;
 
   ngOnInit(): void {
     this.loadMySquadFromLocalStorage();

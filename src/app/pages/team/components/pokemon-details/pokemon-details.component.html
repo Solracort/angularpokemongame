@@ -5,7 +5,7 @@
                 class="goHome"
                 [routerLink]="''">reply
             </mat-icon>
-            <span><strong>Squad(choose 4): </strong></span>
+            <span><strong>Squad: <br><small>(choose 4)</small>: </strong></span>
         </div>
         <div class="team" *ngFor="let pokemon of mySquad"> {{pokemon.name | uppercase}}&nbsp;   </div>
     </div>

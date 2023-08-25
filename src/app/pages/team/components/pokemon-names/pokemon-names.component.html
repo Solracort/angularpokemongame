@@ -1,5 +1,13 @@
 <div class="row">
-    <mat-grid-list class="matgridlist" cols="10" rowHeight="20px" >
+    <div class="toggle-button">
+        <mat-icon class="expand-icon" (click)="toggleTable()">expand_more</mat-icon>
+    </div>
+    
+    <mat-grid-list 
+        [style.max-height.px]="isTableVisible ? 800 : 0"
+        class="matgridlist" 
+        [cols]="colsTable"
+        rowHeight="20px" >
         <mat-grid-tile class="matgridtile" *ngFor="let pokemon of pokemon100List" >
             <li (click)="showPokemonDetailed(pokemon)">
                 <strong>{{pokemon.name | uppercase }}</strong>

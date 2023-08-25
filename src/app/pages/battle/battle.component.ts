@@ -97,7 +97,7 @@ export class BattleComponent {
           let enhancer: number = Math.trunc(this.fightService.checkTypes(
             this.mySquad[i].types[0].type.name, this.myEnemySquad[j].types[0].type.name
             )); 
-            
+
           this.attack  = { ... this.fightService.attack(this.mySquad[i])};
           this.defense = { ... this.fightService.defense(this.myEnemySquad[j])};
           
@@ -159,7 +159,6 @@ export class BattleComponent {
   changeTurn(){this.turnSquad = !this.turnSquad}
   
   ngOnDestroy(): void {
-    
     localStorage.clear();
   }
 }
